@@ -187,7 +187,21 @@
       color: var(--muted);
       grid-column: 1 / -1;
       margin-top: 0.4rem;
+      padding-left: 1.1rem;
     }
+
+    .job-desc li { margin-bottom: 0.3rem; }
+
+    .skill-group { margin-bottom: 1.25rem; }
+
+    .skill-heading {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .edu + .edu { margin-top: 1rem; }
 
     /* ── skills ── */
     .skills-grid {
@@ -297,7 +311,7 @@
       <div class="hero-text">
         <h1>Grant Benson</h1>
         <div class="title">Application Operations Engineer</div>
-        <p>Operations and infrastructure engineer with 13+ years in enterprise software, specializing in cloud platforms, automation, and systems reliability.</p>
+        <p>Application operations engineer with 15 years in enterprise software, focused on production support, observability, incident response, and automating the operational work around SaaS platforms.</p>
       </div>
     </div>
 
@@ -305,10 +319,10 @@
     <section class="about">
       <div class="section-label">About</div>
       <p>
-        I've spent the better part of my career in the weeds of enterprise software — from implementation consulting in the insurance industry to application operations in cloud-hosted SaaS environments. I think in systems, and I'm most comfortable when I'm figuring out why something is broken or how to keep it from breaking again.
+        I've spent my career in the weeds of enterprise software &mdash; from implementation work on insurance platforms to production support for a multi-tenant SaaS risk management platform. I think in systems, and I'm most comfortable figuring out why something is broken or how to keep it from breaking again.
       </p>
       <p>
-        These days I'm focused on infrastructure automation, observability, and the operational side of platform engineering. Currently working toward deeper expertise in Terraform and Ansible as I move toward SRE and DevOps roles.
+        These days I live in New Relic, ServiceNow, and PagerDuty: triaging incidents, running root cause analysis, keeping alerting signal high and noise low, and writing up what went wrong. More and more of my time goes into automation &mdash; building Claude Code skills, MCP integrations, and scripts that take the repetitive work off my team's plate.
       </p>
     </section>
 
@@ -318,64 +332,113 @@
 
       <div class="job">
         <div class="job-title">Application Operations Engineer</div>
-        <div class="job-period">2023 – Present</div>
-        <div class="job-company">Origami Risk</div>
-        <div class="job-desc">Cloud operations support for enterprise risk management SaaS. AWS infrastructure, monitoring with Datadog and New Relic, incident response, and release management.</div>
+        <div class="job-period">2023 &ndash; Present</div>
+        <div class="job-company">Origami Risk &middot; Remote</div>
+        <ul class="job-desc">
+          <li>Production support for a multi-tenant SaaS risk management platform: triage ServiceNow incidents and drive root cause analysis on slow page loads, database blocking, queue backlogs, out-of-memory crashes, and hung batch processes using New Relic APM, logs, browser monitoring, and NRQL.</li>
+          <li>Monitor and manage message queues, the Origami Process Controller, and Temporal workflow workers across dozens of hosts; hands-on remediation with memory dumps, IIS app pool recycles, and service restarts.</li>
+          <li>Own New Relic alerting hygiene for US and EU production &mdash; tuning and noise reduction, synthetic monitor downtimes for releases and patch windows, and monthly page-load and Apdex reports.</li>
+          <li>Support release and patch nights, take PagerDuty on-call, help run P0 incident bridges, and author formal Root Cause Analysis documents for leadership.</li>
+          <li>Build and maintain a shared library of Claude Code skills, MCP integrations, and scripts (PowerShell, NRQL, Node.js) automating alert triage, ticket updates, SFTP provisioning, API usage reports, and log lookups across ServiceNow, New Relic, PagerDuty, Azure DevOps, Slack, and Temporal.</li>
+          <li>Contribute to Terraform-managed New Relic configuration through pull requests and peer review; administer Mailgun, Cerberus SFTP, and Active Directory-backed file transfer accounts.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="job-title">Support Engineer I</div>
-        <div class="job-period">2019 – 2023</div>
+        <div class="job-period">2019 &ndash; 2022</div>
         <div class="job-company">Duck Creek Technologies</div>
-        <div class="job-desc">Technical support engineering for insurance software platform. Handled complex escalations, environment troubleshooting, and cross-team coordination.</div>
+        <ul class="job-desc">
+          <li>SaaS triage support engineer for several customers.</li>
+          <li>Completed hundreds of production data fixes, independently and alongside customers.</li>
+          <li>Led knowledge-sharing sessions and helped teammates debug policy and Author issues using experience from the services side.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="job-title">Senior Analyst, Product Implementation</div>
-        <div class="job-period">2014 – 2019</div>
+        <div class="job-period">2014 &ndash; 2019</div>
         <div class="job-company">Duck Creek Technologies</div>
-        <div class="job-desc">Led implementation engagements for enterprise insurance software clients. Configuration, integration, and delivery across multiple product lines.</div>
+        <ul class="job-desc">
+          <li>Implementation specialist on multiple Duck Creek projects &mdash; development from requirements and defect debugging and fixes.</li>
+          <li>Areas of note: TransACT, UserAdmin, IDO/shredding, and platform integrations.</li>
+        </ul>
       </div>
 
       <div class="job">
         <div class="job-title">Analyst, Product Implementation</div>
-        <div class="job-period">2011 – 2014</div>
+        <div class="job-period">2011 &ndash; 2014</div>
         <div class="job-company">Duck Creek Technologies</div>
-        <div class="job-desc">Started as an implementation intern, converted to full-time. Worked on software configuration, XSLT transformations, SQL, and client delivery.</div>
+        <ul class="job-desc">
+          <li>Implementation specialist on various projects &mdash; development from requirements and defect debugging and fixes.</li>
+          <li>Areas of note: TransACT, UserAdmin, IDO/shredding, and platform integrations.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Skills -->
     <section>
       <div class="section-label">Skills &amp; Tools</div>
-      <div class="skills-grid">
-        <span class="tag">AWS</span>
-        <span class="tag">Python</span>
-        <span class="tag">PowerShell</span>
-        <span class="tag">Datadog</span>
-        <span class="tag">New Relic</span>
-        <span class="tag">Terraform</span>
-        <span class="tag">Ansible</span>
-        <span class="tag">SQL</span>
-        <span class="tag">ServiceNow</span>
-        <span class="tag">Git</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">Linux</span>
-        <span class="tag">Windows</span>
-        <span class="tag">NGINX</span>
-        <span class="tag">SaaS Operations</span>
-        <span class="tag">Incident Response</span>
-        <span class="tag">Release Management</span>
-        <span class="tag">Observability</span>
+      <div class="skill-group">
+        <div class="skill-heading">Operations &amp; Monitoring</div>
+        <div class="skills-grid">
+          <span class="tag">New Relic</span>
+          <span class="tag">NRQL</span>
+          <span class="tag">Datadog</span>
+          <span class="tag">Sumo Logic</span>
+          <span class="tag">PagerDuty</span>
+          <span class="tag">OpsGenie</span>
+          <span class="tag">ServiceNow</span>
+          <span class="tag">Temporal</span>
+          <span class="tag">IIS</span>
+          <span class="tag">Windows Server</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Incident Response</span>
+          <span class="tag">Root Cause Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-heading">Automation &amp; AI</div>
+        <div class="skills-grid">
+          <span class="tag">Claude Code</span>
+          <span class="tag">MCP</span>
+          <span class="tag">ChatGPT</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript / Node.js</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Ansible</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">Azure DevOps</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-heading">Platform</div>
+        <div class="skills-grid">
+          <span class="tag">Duck Creek</span>
+          <span class="tag">SaaS Support</span>
+          <span class="tag">Data Fixes</span>
+          <span class="tag">Integrations</span>
+          <span class="tag">SFTP</span>
+          <span class="tag">Mailgun</span>
+          <span class="tag">Active Directory</span>
+        </div>
       </div>
     </section>
 
     <!-- Education -->
     <section>
-      <div class="section-label">Education</div>
+      <div class="section-label">Education &amp; Certifications</div>
       <div class="edu">
-        <strong>Bachelor of Science</strong>
-        <span>Missouri University of Science &amp; Technology</span>
+        <strong>B.S. in Electrical Engineering</strong>
+        <span>Missouri University of Science &amp; Technology &middot; Rolla, Missouri</span>
+      </div>
+      <div class="edu">
+        <strong>AINS 21 &amp; AINS 22</strong>
+        <span>Insurance certifications</span>
       </div>
     </section>
 
